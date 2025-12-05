@@ -1,0 +1,85 @@
+@import "../../scss/mixins.scss";
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  // flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.group_field {
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  gap: 10px;
+}
+.select {
+  width: 250px;
+}
+.input_name {
+  input {
+    width: 250px;
+  }
+}
+.field {
+  input {
+    height: var(--input-height);
+    box-sizing: border-box;
+    padding: 0 16px;
+    @include input;
+  }
+  &_title {
+    @include field-title;
+    margin-bottom: 10px;
+  }
+}
+.price {
+  display: flex;
+  // flex-direction: column;
+  gap: 10px;
+
+  input {
+    width: 100px;
+  }
+
+  &_group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &_title {
+      font-size: 14px;
+      color: var(--gray-color);
+    }
+  }
+}
+
+.btn {
+  @include orange-button;
+  height: 40px;
+  width: 80px;
+  align-self: flex-end;
+}
+
+@media (max-width: 900px) {
+  .form {
+    flex-wrap: wrap;
+  }
+  .group_field {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .form {
+    flex-wrap: wrap;
+  }
+  .group_field {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .btn {
+    align-self: auto;
+  }
+}

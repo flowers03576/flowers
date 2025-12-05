@@ -1,0 +1,162 @@
+.section {
+  max-width: 1258px;
+  margin: 0 auto;
+  padding: 0 var(--safety-margin);
+}
+.content {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.text {
+  flex-shrink: 0;
+  flex-grow: 0;
+  width: 550px;
+
+  background-color: #bf5730;
+  padding: 45px;
+  color: white;
+  font-size: 20px;
+  &_title {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  p + p {
+    margin-bottom: 15px;
+  }
+
+  p {
+    text-align: start;
+    line-height: 1.4;
+  }
+}
+
+.images {
+  display: grid;
+  grid-template-areas:
+    "A C"
+    "B B";
+  gap: 10px;
+}
+
+.img_container {
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.main_photo {
+  grid-area: A;
+  height: 300px;
+  width: 100%;
+}
+
+.big_photo {
+  grid-area: B;
+  width: 100%;
+  height: 400px;
+}
+
+.small_photo {
+  height: 300px;
+  grid-area: C;
+  width: 100%;
+}
+
+@media (max-width: 1280px) {
+  .content {
+    justify-content: center;
+  }
+  .text {
+    width: 450px;
+  }
+
+  .big_photo {
+    height: 425px;
+  }
+
+  .main_photo,
+  .small_photo {
+    height: 360px;
+  }
+}
+@media (max-width: 1024px) {
+  .text_title {
+    font-size: 24px;
+  }
+
+  .text {
+    p:not(.text_title) {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .big_photo {
+    height: 338px;
+  }
+
+  .main_photo,
+  .small_photo {
+    height: 330px;
+  }
+}
+
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .text {
+    width: 600px;
+    box-sizing: border-box;
+  }
+
+  .images {
+    width: 600px;
+  }
+  .big_photo {
+    height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 650px) {
+  .text {
+    width: 450px;
+    padding: 30px;
+  }
+
+  .images {
+    width: 450px;
+  }
+}
+
+@media (max-width: 460px) {
+  .text {
+    width: 290px;
+    padding: 20px;
+  }
+
+  .images {
+    grid-template-areas:
+      "A"
+      "C"
+      "B";
+    width: 290px;
+  }
+}

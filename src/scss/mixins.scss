@@ -1,0 +1,46 @@
+@mixin section-container {
+  padding: 0 var(--safety-margin);
+}
+
+@mixin orange-button {
+  border-radius: 6px;
+  border: none;
+  background-color: var(--orange-color);
+  cursor: pointer;
+  color: white;
+  &:hover {
+    background-color: var(--orange-2-color);
+  }
+  &:disabled {
+    background-color: var(--orange-3-color);
+    cursor: auto;
+  }
+}
+
+@mixin input {
+  border: 1px solid var(--red-color);
+  border-radius: 3px;
+  font-weight: lighter;
+  &:hover,
+  &:focus {
+    box-shadow: var(--box-shadow-1);
+  }
+}
+
+@mixin field-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray-color);
+}
+
+@mixin fixed-btn {
+  position: fixed;
+  z-index: 3;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  box-shadow: 0px 0px 9px 0px rgba(34, 60, 80, 0.2);
+  &:hover {
+    background-color: var(--orange-3-color);
+  }
+}
