@@ -1,7 +1,6 @@
 import "./App.scss";
 import Main from "./layouts/Main/Main";
 import { Route, Routes } from "react-router-dom";
-import Test from "./components/Test";
 import Basket from "./pages/Basket";
 import AdminAuth from "./pages/AdminAuth/AdminAuth";
 import Admin from "./pages/Admin/Admin";
@@ -16,6 +15,7 @@ import RequireAuth from "./hoc/RequireAuth";
 import AdminMain from "./components/Admin/Main/Main";
 import { getDatabase, goOffline } from "firebase/database";
 import Polytics from "./pages/Politycs/Polytics";
+import Test from "./Test";
 
 function App() {
   const dispatch = useDispatch();
@@ -26,6 +26,7 @@ function App() {
   followBouquets(dispatch);
   return (
     <div className="App">
+      <Test />
       <Routes>
         <Route
           path="/"
