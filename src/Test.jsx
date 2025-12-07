@@ -19,7 +19,7 @@ export default function Test() {
     // Fetch data from Redis
     const fetchData = async () => {
       // const result = await redis.get("item");
-      const response = await fetch("/api/survey", {
+      const response = await fetch("/api/test", {
          method: "GET",
        }).then(res => res.json());
       console.log(response)
