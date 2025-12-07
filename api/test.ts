@@ -3,5 +3,5 @@ export default async function handler(req, res) {
   // const result = await redis.get("item");
   
   // Return the result in the response
-  res.status(200).json('hi');
+  res.send('')
 }
